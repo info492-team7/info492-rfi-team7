@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Thesis + Coordination Posture Design</title>
+  <title>INFO 492 GC Team 7</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -15,6 +15,7 @@
 
   <!-- NAVIGATION -->
   <nav class="navbar">
+
     <div class="nav-container">
 
       <div class="brand">
@@ -23,54 +24,71 @@
 
       <div class="nav-links">
         <a href="#team">Team</a>
-        <a href="#thesis">Team Thesis</a>
+        <a href="#thesis">Thesis</a>
         <a href="#lens">Project Lens</a>
-        <a href="#coordination">Coordination Posture</a>
-        <a href="#demos">Demo Concepts</a>
+        <a href="#coordination">Coordination</a>
+        <a href="#demos">Experiments</a>
       </div>
 
     </div>
+
   </nav>
 
 
   <!-- HERO -->
   <header class="hero">
+
     <div class="hero-content">
 
       <p class="eyebrow">
-        UNIVERSITY OF WASHINGTON · INFO 492 C
+        UNIVERSITY OF WASHINGTON · CONSTRUCTION INFORMATICS
       </p>
 
       <h1>
-        Thesis + Coordination
-        <span>Posture Design</span>
+        Improving Clarity in
+        <span>AI-Assisted RFI Drafting</span>
       </h1>
 
+      <p class="hero-description">
+        GC Team 7 · Thesis + Coordination Posture Design
+      </p>
+
       <div class="hero-tags">
-        <span>GC Team 7</span>
-        <span>Construction Informatics</span>
-        <span>RFI</span>
+        <span>RFI Creation</span>
+        <span>AI Drafting Assistant</span>
+        <span>Clarity Defects</span>
+        <span>Construction Coordination</span>
       </div>
 
     </div>
+
   </header>
 
 
   <main>
 
+
     <!-- TEAM -->
     <section id="team" class="section">
 
       <div class="section-heading">
-        <p class="section-label">TEAM</p>
-        <h2>Team</h2>
+
+        <p class="section-label">
+          01 · TEAM
+        </p>
+
+        <h2>
+          Project Team
+        </h2>
+
       </div>
+
 
       <div class="team-grid">
 
         <div class="team-card">
-          <div class="initials">ZQ</div>
-          <h3>Zijing Qian</h3>
+          <div class="initials">SQ</div>
+          <h3>Selena Qian</h3>
           <p>GC Team 7</p>
         </div>
 
@@ -93,70 +111,125 @@
         </div>
 
       </div>
+
     </section>
 
 
-    <!-- TEAM THESIS -->
+    <!-- THESIS -->
     <section id="thesis" class="section">
 
       <div class="section-heading">
-        <p class="section-label">01 · TEAM THESIS</p>
-        <h2>Team thesis</h2>
+
+        <p class="section-label">
+          02 · TEAM THESIS
+        </p>
+
+        <h2>
+          Team Thesis
+        </h2>
+
       </div>
+
 
       <div class="feature-card">
 
-        <p>
-          When AI is used to rewrite or summarize words in a Request for Information
-          (RFI), it will alter the original meaning of the request, these alterations being
-          numbers rounded, words being construed, decision branches being dropped, and
-          jargon and human specificity being lost. We’ll test this by comparing each original
-          RFI with its AI-written version. This can create an RFI that communicates
-          something different from the problem identified on the project. Construction
-          information flow breaks down at certain points of translation. For example, an
-          issue can be noticed by a subcontractor, then a general contractor can formalize
-          the issue as an RFI, which then gets interpreted by the respective entities on the
-          project. Keeping the correct parties in the loop in an RFI minimizes the chance of
-          information getting lost in translation or not correctly passed along later (The RFI
-          In Construction: What It Is, What It's For &amp; 7 Key Best Practices, 2020). Each
-          iteration of this process and RFI creation is a chance for the issue's meaning to
-          change if AI is used. The purpose of an RFI is to fill in information gaps at
-          request by capturing and sharing specific decisions made during the project
-          (Medina and Tell, 2025), so an RFI that does the opposite by miswording the
-          original issue defeats its own purpose. This can lead to a response to the wrong
-          questions, trigger an unnecessary clarifying follow-up RFI, or lead to a change
-          that wasn't intended. This matters because RFIs are already costly and slow.
-          According to a 2013 Navigant study, managing/responding to one RFI costs an
-          average of $1,080, with response times averaging 6.4 to 10 days. This shows
-          that nearly 25% of all RFIs go completely unanswered (as cited in Medina and
-          Tell, 2025).
+        <p class="lead">
+          Follow-ups on Requests for Information (RFIs) are driven substantially by clarity
+          defects such as missing references/documents, quantities without units, double-
+          barreled questions, or undefined abbreviations. With the use of an AI drafting
+          assistant at the creation stage, we expect at least a 10% relative reduction,
+          based on our project lens data, in sent RFIs with at least one defect.
         </p>
 
         <p>
-          We are specifically focusing on the creation stage of the RFI lifecycle
-          because those early-stage errors can be carried into the review, response,
-          approval, and implementation stages. Upon our analysis of the RFI workflow, we
-          identified five likely key failures with AI usage. The first is that numbers could be
-          rounded or overclaimed, which changes quantities and dimensions of the project,
-          and dimension and quantity discrepancies are already a common reason for an
-          RFI (The RFI In Construction: What It Is, What It's For &amp; 7 Key Best Practices,
-          June 18, 2020). Second, words are misconstrued, meaning the output has a
-          different meaning than the input. Third, decision branches are dropped, so
-          there's a risk of loss of detail where, if you drop too many branches, the LLM
-          becomes too simple and open-ended questions can be scoped down to a
-          singular answer. Fourth, jargon and human specificity are lost. RFIs should
-          reference specific drawings and specifications and describe exactly where the
-          information is lacking. Finally, prior RFI creation with the same LLM can have
-          effects on new ones by pulling context from earlier requests that can be incorrect
-          or non-relevant information into the new and current RFI. These failures are
-          extremely important to address because an RFI is used as technical information
-          for construction implementation and part of the official project record (Medina and
-          Tell, 2025). An inaccurate RFI can cause schedule delays, unapproved changes,
-          and cost disputes in materials and billing/labor. Apart from technical project
-          issues, it also creates an accountability problem because if the inaccuracy starts
-          at the drafting stage, then it could be very hard to trace where the issue actually
-          began. AI cannot be held responsible for it, so automatically the general
-          contractor would be held accountable for being the RFI author.
+          One point
+          where construction information flow breaks down is the moment an RFI is written.
+          An issue can be noticed in the field by a subcontractor, translated into an RFI by
+          a general contractor, and then sent to the respective party within the project. This
+          means that the wording at the creation stage is what every later party has to work
+          from.
+        </p>
+
+        <p>
+          RFIs should reference specific drawings, documents, and specifications,
+          say who needs to respond, and include a needed-by date, because the initial RFI
+          as well as the response become part of the official project record (PM Problems,
+          2020).
+        </p>
+
+        <p>
+          When one of these essential details of an RFI is missing, the responder
+          has to ask for it before they can answer, which triggers a follow-up and at times
+          multiple rounds of clarification (SubmittalLink, n.d.).
+        </p>
+
+        <p>
+          RFIs are also costly before
+          any follow-up happens. A study found that the estimated average cost of an RFI
+          is $1,080 to review and respond to, with a median response time of 9.7 days, and
+          about 22% of RFIs never answered (Navigant Construction Forum, 2013). Each
+          follow-up adds another review and response cycle to that cost, and an RFI can
+          go unanswered, adding delay to the project.
+        </p>
+
+        <p>
+          We’re focusing on the creation stage
+          because most of these defects can be caught before the RFI is sent out using an
+          AI drafting assistant by checking for units, expanding abbreviations, splitting
+          double-barreled questions, and asking for drawing or specification references.
+        </p>
+
+      </div>
+
+
+      <!-- CITATIONS -->
+      <div class="content-card">
+
+        <h3>
+          Citations
+        </h3>
+
+        <p>
+          Dellas, G. (2026). RFI Best Practices: A Guide for Construction
+          Professionals. Submittallink.Com.
+        </p>
+
+        <p>
+          <a
+            href="https://www.submittallink.com/post/rfi-best-practices"
+            target="_blank"
+            rel="noopener noreferrer">
+            https://www.submittallink.com/post/rfi-best-practices
+          </a>
+        </p>
+
+        <p>
+          Hughes, N., &amp; Ap, L. (2013). IMPACT &amp; CONTROL OF RFIs ON
+          CONSTRUCTION PROJECTS A Research Perspective Issued by the
+          Navigant Construction ForumTM Construction Forum.
+        </p>
+
+        <p>
+          <a
+            href="https://www.cmaanet.org/sites/default/files/resource/Impact%20%26%20Control%20of%20RFIs%20on%20Construction%20Projects.pdf"
+            target="_blank"
+            rel="noopener noreferrer">
+            View source
+          </a>
+        </p>
+
+        <p>
+          PM Problems. (2020). The RFI In Construction: What It Is, What It’s For &amp;
+          7 Key Best Practices [Free Template] [Video]. YouTube.
+        </p>
+
+        <p>
+          <a
+            href="https://www.youtube.com/watch?v=L17zSnTh0Mo"
+            target="_blank"
+            rel="noopener noreferrer">
+            https://www.youtube.com/watch?v=L17zSnTh0Mo
+          </a>
         </p>
 
       </div>
@@ -168,46 +241,80 @@
     <section id="lens" class="section">
 
       <div class="section-heading">
-        <p class="section-label">02 · PROJECT LENS</p>
-        <h2>Project lens</h2>
+
+        <p class="section-label">
+          03 · PROJECT LENS
+        </p>
+
+        <h2>
+          Brush Creek Work Center Construction
+        </h2>
+
       </div>
+
 
       <div class="feature-card">
 
         <p>
-          Our team will use the public RFI log from the Brush Creek Work Center Construction
-          solicitation (127EAW26R0001), issued by the U.S. Forest Service. The log is dated
-          March 27th, 2026 and it contains 271 questions from bidders and their respective
-          government responses. These are pre-award questions from bidders to the
-          government, not construction-phase RFIs that have been passed from the
-          subcontractors then through to a GC then to a design team. However, this log still fits
-          our study. Each of the questions is a real contractor's own wording regarding drawings,
-          specifications and scope so it works as a representation of the original issue that a GC
-          would formalize. The government's response will alos give us a reference answer to
-          check whether a question that is rewritten would get a similar response. Many entries
-          have to do with proposal logic, like page limits and past performance. We can easily
-          filter this to just technical questions and select the 10 that best cover our demos (listed
-          below). We do not plan to use synthetic data. If a test will require it, such as ambiguity,
-          we will instead just modify a real RFI and keep its construction context.
+          Our team will use the public RFI log from the Brush Creek Work Center
+          Construction solicitation (127EAW26R0001), issued by the U.S. Forest Service.
+          The log is dated March 27th, 2026 and it contains 271 questions from bidders
+          and their respective government responses.
         </p>
+
+        <p>
+          These are pre-award questions from
+          bidders to the government, not construction-phase RFIs that have been passed
+          from the subcontractors then through to a GC then to a design team. However,
+          this log still fits our study.
+        </p>
+
+        <p>
+          Each of the questions is a real contractor's own
+          wording regarding drawings, specifications and scope so it works as a
+          representation of the original issue that a GC would formalize. The government's
+          response will also give us a reference answer to check whether a question that is
+          rewritten would get a similar response.
+        </p>
+
+        <p>
+          Many entries have to do with proposal
+          logic, like page limits and past performance. We can easily filter this to just
+          technical questions and select approximately 10 technical RFIs that best align
+          with our four demo conditions (listed below).
+        </p>
+
+        <p>
+          We do not plan to use synthetic
+          data. If a test will require it, such as ambiguity, we will instead just modify a real
+          RFI and keep its construction context.
+        </p>
+
 
         <div class="dataset-note">
 
           <div>
-            <strong>Source</strong>
+
+            <strong>
+              Source
+            </strong>
 
             <p>
-              U.S. Department of Agriculture, Forest Service. (2026, March 27). 127EAW26R0001
-              RFI log 3.27.2026 [Solicitation attachment]. GovTribe.
+              U.S. Department of Agriculture, Forest Service. (2026, March 27).
+              127EAW26R0001 RFI log 3.27.2026 [Solicitation attachment]. GovTribe.
             </p>
+
           </div>
+
 
           <a
             class="button"
             href="https://govtribe.com/file/government-file/127eaw26r0001-127eaw26r0001-rfi-log-3-dot-27-dot-2026-dot-pdf"
             target="_blank"
             rel="noopener noreferrer">
+
             View RFI Log
+
           </a>
 
         </div>
@@ -221,46 +328,101 @@
     <section id="coordination" class="section">
 
       <div class="section-heading">
-        <p class="section-label">03 · COORDINATION POSTURE</p>
-        <h2>Coordination posture</h2>
+
+        <p class="section-label">
+          04 · COORDINATION POSTURE
+        </p>
+
+        <h2>
+          Coordination Posture
+        </h2>
+
       </div>
 
 
-      <div class="content-card">
+      <div class="flow">
 
-        <h3>Parties involved:</h3>
+        <div class="flow-card">
 
-        <p>
-          <strong>Subcontractor / Contractor</strong> — identifies the original construction issue and
-          communicates the request for clarification.
-        </p>
+          <span class="flow-number">
+            01
+          </span>
 
-        <p>
-          <strong>General Contractor (GC)</strong> — reviews the issue, uses AI assistance to
-          rewrite or structure the request, verifies that the original meaning is
-          preserved, and submits the formal RFI.
-        </p>
+          <h3>
+            Subcontractor / Contractor
+          </h3>
 
-        <p>
-          <strong>Design Team / Owner Representative</strong> — receives the RFI, interprets the
-          request, and provides clarification or a response.
-        </p>
+          <p>
+            identifies the original construction issue and
+            communicates the request for clarification.
+          </p>
+
+        </div>
+
+
+        <div class="flow-arrow">
+          →
+        </div>
+
+
+        <div class="flow-card highlight">
+
+          <span class="flow-number">
+            02
+          </span>
+
+          <h3>
+            General Contractor (GC)
+          </h3>
+
+          <p>
+            reviews the issue, uses AI assistance to
+            rewrite or structure the request, verifies that the original meaning is
+            preserved, and submits the formal RFI.
+          </p>
+
+        </div>
+
+
+        <div class="flow-arrow">
+          →
+        </div>
+
+
+        <div class="flow-card">
+
+          <span class="flow-number">
+            03
+          </span>
+
+          <h3>
+            Design Team / Owner Representative
+          </h3>
+
+          <p>
+            receives the RFI, interprets the
+            request, and provides clarification or a response.
+          </p>
+
+        </div>
 
       </div>
 
 
       <div class="two-column posture-grid">
 
+
         <div class="content-card">
 
-          <h3>Information artifacts in scope:</h3>
+          <h3>
+            Information artifacts in scope:
+          </h3>
 
           <p>
             The main information artifact is the Request for Information (RFI).
-            Additional artifacts might be the original contractor question, project
-            drawings, specifications, and additional artifacts may include the original
-            contractor question, relevant drawings, specifications, and supporting
-            project documents needed to interpret the RFI.
+            Additional artifacts may include the original contractor question, relevant
+            project drawings, specifications, and supporting project documents
+            needed to interpret the RFI.
           </p>
 
         </div>
@@ -268,7 +430,9 @@
 
         <div class="content-card">
 
-          <h3>Coordination posture:</h3>
+          <h3>
+            Coordination posture:
+          </h3>
 
           <p>
             AI will be used only as a drafting and organization assistant for RFIs. It
@@ -281,27 +445,40 @@
 
         </div>
 
+
       </div>
 
     </section>
 
 
-    <!-- DEMO CONCEPTS -->
+    <!-- DEMOS -->
     <section id="demos" class="section">
 
       <div class="section-heading">
-        <p class="section-label">04 · DEMO CONCEPTS</p>
-        <h2>Demo Concepts</h2>
+
+        <p class="section-label">
+          05 · DEMO CONCEPTS
+        </p>
+
+        <h2>
+          Four Demo Concepts
+        </h2>
+
       </div>
 
 
       <div class="demo-grid">
 
+
         <div class="demo-card">
 
-          <span class="demo-number">01</span>
+          <span class="demo-number">
+            01
+          </span>
 
-          <h3>Demo 1 — Basic RFI Rewrite</h3>
+          <h3>
+            Demo 1 — Basic RFI Rewrite
+          </h3>
 
           <p>
             Test whether AI can rewrite a
@@ -313,9 +490,13 @@
 
         <div class="demo-card">
 
-          <span class="demo-number">02</span>
+          <span class="demo-number">
+            02
+          </span>
 
-          <h3>Demo 2 — Context Preservation</h3>
+          <h3>
+            Demo 2 — Context Preservation
+          </h3>
 
           <p>
             Test whether AI preserves
@@ -328,9 +509,13 @@
 
         <div class="demo-card">
 
-          <span class="demo-number">03</span>
+          <span class="demo-number">
+            03
+          </span>
 
-          <h3>Demo 3 — Ambiguity Preservation</h3>
+          <h3>
+            Demo 3 — Ambiguity Preservation
+          </h3>
 
           <p>
             Test whether AI preserves
@@ -343,9 +528,13 @@
 
         <div class="demo-card">
 
-          <span class="demo-number">04</span>
+          <span class="demo-number">
+            04
+          </span>
 
-          <h3>Demo 4 — Meaning Verification</h3>
+          <h3>
+            Demo 4 — Meaning Verification
+          </h3>
 
           <p>
             Test whether a human
@@ -354,6 +543,7 @@
           </p>
 
         </div>
+
 
       </div>
 
@@ -364,9 +554,17 @@
     <section class="section">
 
       <div class="section-heading">
-        <p class="section-label">05 · TEAM WEB PRESENCE</p>
-        <h2>Team web presence</h2>
+
+        <p class="section-label">
+          06 · TEAM WEB PRESENCE
+        </p>
+
+        <h2>
+          Team Web Presence
+        </h2>
+
       </div>
+
 
       <div class="feature-card">
 
@@ -391,13 +589,22 @@
     <div class="footer-content">
 
       <div>
-        <strong>INFO 492 C · Construction Informatics</strong>
-        <p>GC Team 7 · University of Washington</p>
+
+        <strong>
+          INFO 492 C · Construction Informatics
+        </strong>
+
+        <p>
+          GC Team 7 · University of Washington
+        </p>
+
       </div>
+
 
       <div class="footer-right">
         Thesis + Coordination Posture Design
       </div>
+
 
     </div>
 
