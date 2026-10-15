@@ -1,0 +1,112 @@
+[
+  {
+    "rfi_id": "50",
+    "needs_response": true,
+    "root_cause": "scope_split",
+    "responder": "contracting_officer",
+    "due": "before_proposal_due",
+    "contractual_risk": "medium",
+    "risk_reason": "Unclear scope of supply and installation for equipment directly impacts project cost and procurement responsibilities.",
+    "priority": 2,
+    "duplicate_of": null
+  },
+  {
+    "rfi_id": "41",
+    "needs_response": true,
+    "root_cause": "missing_info",
+    "responder": "civil",
+    "due": "before_proposal_due",
+    "contractual_risk": "medium",
+    "risk_reason": "Lack of bollard protection around a fire hydrant poses a safety and property damage risk, potentially leading to change orders if added post-construction.",
+    "priority": 2,
+    "duplicate_of": null
+  },
+  {
+    "rfi_id": 67,
+    "needs_response": true,
+    "root_cause": "missing_info",
+    "responder": "electrical",
+    "due": null,
+    "contractual_risk": "medium",
+    "risk_reason": "Incomplete electrical design for the BBQ pad requires clarification to ensure material procurement and installation comply with code and design intent.",
+    "priority": 2,
+    "duplicate_of": null
+  },
+  {
+    "rfi_id": "106",
+    "needs_response": true,
+    "root_cause": "doc_conflict",
+    "responder": "architect",
+    "due": null,
+    "contractual_risk": "medium",
+    "risk_reason": "Material selection affects procurement cost, structural weight, and lead times.",
+    "priority": 2,
+    "duplicate_of": null
+  },
+  {
+    "rfi_id": "48",
+    "needs_response": true,
+    "root_cause": "ambiguity",
+    "responder": "contracting_officer",
+    "due": "before_proposal_due",
+    "contractual_risk": "high",
+    "risk_reason": "Failure to clarify pricing structure before bid submission can lead to invalid bids or contractual disputes regarding project scope.",
+    "priority": 1,
+    "duplicate_of": null
+  },
+  {
+    "rfi_id": "76",
+    "needs_response": true,
+    "root_cause": "missing_info",
+    "responder": "architect",
+    "due": "before_proposal_due",
+    "contractual_risk": "medium",
+    "risk_reason": "Compliance with energy code is a regulatory requirement that could result in rejected submittals or costly change orders if specifications are not clarified prior to procurement.",
+    "priority": 1,
+    "duplicate_of": null
+  },
+  {
+    "rfi_id": "123",
+    "needs_response": true,
+    "root_cause": "missing_info",
+    "responder": "architect",
+    "due": "before_proposal_due",
+    "contractual_risk": "medium",
+    "risk_reason": "Specified manufacturers cannot meet certification requirements, potentially impacting procurement and compliance.",
+    "priority": 1,
+    "duplicate_of": null
+  },
+  {
+    "rfi_id": "13",
+    "needs_response": true,
+    "root_cause": "third_party",
+    "responder": "contracting_officer",
+    "due": "before_proposal_due",
+    "contractual_risk": "medium",
+    "risk_reason": "Lack of clarity on utility coordination and financial responsibility for permanent power poses potential schedule and budget impacts.",
+    "priority": 1,
+    "duplicate_of": null
+  },
+  {
+    "rfi_id": "49",
+    "needs_response": true,
+    "root_cause": "missing_info",
+    "responder": "fire_protection",
+    "due": "before_proposal_due",
+    "contractual_risk": "high",
+    "risk_reason": "Fire protection requirements significantly impact project cost and life safety compliance.",
+    "priority": 1,
+    "duplicate_of": null
+  },
+  {
+    "rfi_id": "107",
+    "needs_response": true,
+    "root_cause": "doc_conflict",
+    "responder": "multiple",
+    "due": "before_proposal_due",
+    "contractual_risk": "medium",
+    "risk_reason": "Inconsistent technical specifications for equipment can lead to change orders, cost overruns, and procurement delays.",
+    "priority": 1,
+    "duplicate_of": null
+  }
+]
