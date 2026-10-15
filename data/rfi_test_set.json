@@ -1,0 +1,53 @@
+
+[
+  {
+    "rfi_id": 48,
+    "topic": "Bid options 1-5",
+    "question": "Please clarify whether bid options 1-5 are adds or deducts."
+  },
+  {
+    "rfi_id": 50,
+    "topic": "Engine garage and barracks appliances",
+    "question": "Please clarify whether the ice machine, washer, dryer, and lockers are contractor furnished and contractor installed."
+  },
+  {
+    "rfi_id": 76,
+    "topic": "Overhead doors air infiltration",
+    "question": "Do the sectional overhead doors require air infiltration resistance certification for energy code compliance?"
+  },
+  {
+    "rfi_id": 123,
+    "topic": "Overhead doors substitution",
+    "question": "The specified overhead door manufacturers do not have the required NFRC certification. Please clarify the air infiltration requirements and whether substitute manufacturers are acceptable."
+  },
+  {
+    "rfi_id": 13,
+    "topic": "PG&E application and fees",
+    "question": "Has the Government initiated coordination with PG&E for the permanent electrical service? Please clarify the application process and responsibility for associated fees."
+  },
+  {
+    "rfi_id": 41,
+    "topic": "Hydrant bollards",
+    "question": "Sheet 2C103 does not show bollard protection around the hydrant between the engine garage and barracks. Should bollards be provided?"
+  },
+  {
+    "rfi_id": 49,
+    "topic": "Fire sprinklers",
+    "question": "Sheet OF001 indicates fire protection for the barracks only. Please confirm whether the barracks is the only building requiring fire sprinkler piping."
+  },
+  {
+    "rfi_id": 67,
+    "topic": "BBQ pad conduit",
+    "question": "What conduit size and number of circuits are required for the BBQ pad? Please confirm whether the homerun connects to Panel W or W1."
+  },
+  {
+    "rfi_id": 106,
+    "topic": "Roof panel thickness",
+    "question": "Specification Section 07 41 13 lists both 24 gauge steel and .040 aluminum for formed metal roof panels. Please clarify the required material and thickness."
+  },
+  {
+    "rfi_id": 107,
+    "topic": "Seedling cooler power and temperature",
+    "question": "Please clarify the required operating temperature range and electrical service for the seedling coolers, as the project requirements appear inconsistent."
+  }
+]

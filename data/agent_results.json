@@ -1,0 +1,46 @@
+[
+  {
+    "rfi_id": "50",
+    "needs_response": true,
+    "root_cause": "scope_split",
+    "responder": "contracting_officer",
+    "due": "before_proposal_due",
+    "contractual_risk": "medium",
+    "risk_reason": "Unclear scope of supply and installation for equipment directly impacts project cost and procurement responsibilities.",
+    "priority": "medium",
+    "duplicate_of": null
+  },
+  {
+    "rfi_id": "41",
+    "needs_response": true,
+    "root_cause": "missing_info",
+    "responder": "civil",
+    "due": "before_proposal_due",
+    "contractual_risk": "medium",
+    "risk_reason": "Lack of bollard protection around a fire hydrant poses a safety and property damage risk, potentially leading to change orders if added post-construction.",
+    "priority": "medium",
+    "duplicate_of": null
+  },
+  {
+    "rfi_id": 67,
+    "needs_response": true,
+    "root_cause": "missing_info",
+    "responder": "electrical",
+    "due": null,
+    "contractual_risk": "medium",
+    "risk_reason": "Incomplete electrical design for the BBQ pad requires clarification to ensure material procurement and installation comply with code and design intent.",
+    "priority": "medium",
+    "duplicate_of": null
+  },
+  {
+    "rfi_id": "106",
+    "needs_response": true,
+    "root_cause": "doc_conflict",
+    "responder": "architect",
+    "due": null,
+    "contractual_risk": "medium",
+    "risk_reason": "Material selection affects procurement cost, structural weight, and lead times.",
+    "priority": "medium",
+    "duplicate_of": null
+  }
+]
