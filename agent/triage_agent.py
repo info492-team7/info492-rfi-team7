@@ -15,3 +15,15 @@ def triage_rfi(rfi):
     }
 
     return result
+
+# Test with a sample RFI
+if __name__ == "__main__":
+    import json
+
+    sample_rfi = {
+        "rfi_id": 48,
+        "question": "Please clarify whether bid options 1-5 are adds or deducts."
+    }
+
+    result = triage_rfi(sample_rfi)
+    print(json.dumps(result, indent=2))
