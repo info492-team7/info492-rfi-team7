@@ -27,6 +27,7 @@
         <a href="#lens">Project Lens</a>
         <a href="#coordination">Coordination</a>
         <a href="#demos">Experiments</a>
+        <a href="#demo1">Demo 1</a>
       </div>
 
     </div>
@@ -409,7 +410,6 @@
 
       <div class="demo-grid">
 
-
         <div class="demo-card">
 
           <span class="demo-number">01</span>
@@ -473,7 +473,6 @@
 
         </div>
 
-
       </div>
 
     </section>
@@ -497,6 +496,201 @@
           of the RFI, and a comparison of meaning, context, assumptions, and clarity
           preservation.
         </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- COORDINATION DEMO #1 -->
+    <section id="demo1" class="section">
+
+      <div class="section-heading">
+        <p class="section-label">07 · COORDINATION DEMO #1</p>
+        <h2>RFI Triage Agent</h2>
+
+        <p>
+          Our first working demo tests whether an AI agent can identify why RFIs
+          are raised and structure them by responder, urgency, contractual risk,
+          and priority.
+        </p>
+      </div>
+
+
+      <!-- SUMMARY -->
+      <div class="demo1-summary">
+
+        <div class="summary-card">
+          <span id="total-rfis">—</span>
+          <p>RFIs Tested</p>
+        </div>
+
+        <div class="summary-card">
+          <span id="response-count">—</span>
+          <p>Need Response</p>
+        </div>
+
+        <div class="summary-card">
+          <span id="high-risk-count">—</span>
+          <p>High Risk</p>
+        </div>
+
+        <div class="summary-card">
+          <span id="duplicate-count">—</span>
+          <p>Duplicates</p>
+        </div>
+
+      </div>
+
+
+      <!-- AGENT OUTPUT -->
+      <div class="section-heading results-heading">
+        <p class="section-label">AGENT OUTPUT</p>
+        <h2>Structured RFI Triage</h2>
+      </div>
+
+      <div id="rfi-results" class="rfi-results">
+        <p>Loading agent results...</p>
+      </div>
+
+
+      <!-- INITIAL TEST RESULTS -->
+      <div class="section-heading results-heading">
+        <p class="section-label">VALIDATION</p>
+        <h2>Initial Test Results</h2>
+
+        <p>
+          Agent v1 was evaluated against the team's 10-RFI answer key and then
+          used in a simulation comparing agent-assisted triage with a manual baseline.
+        </p>
+      </div>
+
+
+      <div id="validation-results" class="validation-results">
+
+        <!-- HEADLINE RESULTS -->
+        <div class="validation-grid">
+
+          <div class="validation-card">
+            <span class="validation-value">69%</span>
+            <h3>Overall Accuracy</h3>
+            <p>
+              Agent v1 compared with the team's 10-RFI answer key.
+            </p>
+          </div>
+
+          <div class="validation-card">
+            <span class="validation-value">90%</span>
+            <h3>Routing Accuracy</h3>
+            <p>
+              Accuracy in identifying who should respond to each RFI.
+            </p>
+          </div>
+
+          <div class="validation-card">
+            <span class="validation-value">10%</span>
+            <h3>Average Time Reduction</h3>
+            <p>
+              Simulated average processing time decreased from 10.1 to 9.2 days.
+            </p>
+          </div>
+
+          <div class="validation-card">
+            <span class="validation-value">61%</span>
+            <h3>Urgent RFI Improvement</h3>
+            <p>
+              Simulated urgent RFI processing time decreased from 10.1 to 3.8 days.
+            </p>
+          </div>
+
+        </div>
+
+
+        <!-- WHAT WORKED / LIMITATION -->
+        <div class="validation-details">
+
+          <div class="result-panel">
+
+            <p class="result-label">
+              WHAT WORKED
+            </p>
+
+            <h3>
+              All urgent RFIs were identified
+            </h3>
+
+            <p>
+              Agent v1 identified all 3 priority-1 RFIs and achieved 70%
+              accuracy on root cause classification and 90% accuracy on
+              responder routing.
+            </p>
+
+          </div>
+
+
+          <div class="result-panel warning-panel">
+
+            <p class="result-label">
+              KEY LIMITATION
+            </p>
+
+            <h3>
+              Urgency was overestimated
+            </h3>
+
+            <p>
+              The agent labeled 6 of 10 RFIs as urgent even though the
+              answer key contained only 3 urgent RFIs. As a result,
+              simulated medium-priority RFI processing time increased by 68%.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- THESIS RESULT -->
+        <div class="thesis-result">
+
+          <p class="result-label">
+            WHAT THIS SAYS ABOUT OUR THESIS
+          </p>
+
+          <h3>
+            The initial results support a 10% processing-time target,
+            but show that better priority calibration is necessary.
+          </h3>
+
+          <p>
+            At Agent v1's measured accuracy, simulated average RFI processing
+            time fell from 10.1 to 9.2 days. A better-calibrated agent with
+            improved routing, priority classification, and repeat detection
+            reduced simulated average processing time by 15%.
+          </p>
+
+        </div>
+
+
+        <!-- ADDITIONAL DETAIL -->
+        <div class="result-panel validation-note">
+
+          <p class="result-label">
+            VALIDATION NOTE
+          </p>
+
+          <h3>
+            Initial results are promising, but the test set is still small.
+          </h3>
+
+          <p>
+            These results are based on 10 RFIs, and the processing times are
+            simulated rather than directly measured from the Brush Creek log.
+            The next version will improve priority calibration, use verbatim
+            RFI questions, and provide earlier RFIs to the agent for repeat
+            detection.
+          </p>
+
+        </div>
 
       </div>
 
@@ -531,6 +725,9 @@
     </div>
 
   </footer>
+
+
+  <script src="script.js"></script>
 
 
 </body>
