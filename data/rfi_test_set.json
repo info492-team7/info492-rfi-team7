@@ -1,53 +1,52 @@
-
 [
   {
-    "rfi_id": 48,
-    "topic": "Bid options 1-5",
-    "question": "Please clarify whether bid options 1-5 are adds or deducts."
+    "rfi_id": "29",
+    "topic": "Water line conflicts with retaining wall footing",
+    "question": "While trenching for the water line along Mason Road, field crews identified a conflict between a portion of the water line and a proposed structural retaining wall and footing. Detail 1/C-500 specifies that the water line should be sleeved at the retaining wall. As it currently stands, the water line will run directly over the footing and through the wall. However, per correspondence with CPL (Civil), the intent was to maintain 1'-0\" of clearance between the top of the 10\" DI pipe and the bottom of the footing. CPL to please advise on how to proceed. Refer to the attached excerpt for a plan markup depicting the issue."
   },
   {
-    "rfi_id": 50,
-    "topic": "Engine garage and barracks appliances",
-    "question": "Please clarify whether the ice machine, washer, dryer, and lockers are contractor furnished and contractor installed."
+    "rfi_id": "30",
+    "topic": "Pile shaft clashes with existing tunnel",
+    "question": "Currently the pile shaft located on GL i clashes with the existing tunnel as shown on S-201C. In order to reach the required depth of the pile per Geoengineers, the pile must be relocated 3' to the North. CPL to please confirm. See attached for references."
   },
   {
-    "rfi_id": 76,
-    "topic": "Overhead doors air infiltration",
-    "question": "Do the sectional overhead doors require air infiltration resistance certification for energy code compliance?"
+    "rfi_id": "33",
+    "topic": "Garbage disposal conflicts with ADA apron",
+    "question": "The garbage disposal called out on Sink S-2 is currently in conflict with the ADA apron at each location. Despite the drain location at the back of the S-2 fixture, the garbage disposal still will not fit with the ADA apron attached underneath. The following units have this conflict:\u2022 Rm Kitchen Lounge E115, E215, E315, E415, E515, E615\u2022 Rm Break Room B116\u2022 Rm Kitchen W406\u2022 Rm Kitchen Lounge W507, W607,W707, W807, W907\u2022 Rm Kitchen Lounge W635, W735, W835\u2022 Rm Allergy Kitchen W517"
   },
   {
-    "rfi_id": 123,
-    "topic": "Overhead doors substitution",
-    "question": "The specified overhead door manufacturers do not have the required NFRC certification. Please clarify the air infiltration requirements and whether substitute manufacturers are acceptable."
+    "rfi_id": "53",
+    "topic": "Foundation drainage elevations not shown",
+    "question": "Page C-700 shows foundation drainage under the west tower but does not show elevations. Please confirm the elevations of the drainage point of connections as shown on the attached sketch."
   },
   {
-    "rfi_id": 13,
-    "topic": "PG&E application and fees",
-    "question": "Has the Government initiated coordination with PG&E for the permanent electrical service? Please clarify the application process and responsibility for associated fees."
+    "rfi_id": "34",
+    "topic": "Site light pole layout and spacing",
+    "question": "1. Please confirm the light pole layout per attached LT-100 site lighting drawing. The spacing between new Soled light poles is roughly 38' and the spacing between the existing Soled light fixture near Willow is only 13' away. Please confirm if the existing light pole should be removed or if the new proposed light pole should be removed from scope to maintain equal spacing. 2. Please confirm that the clouded areas on C-100 are to be cleared and grubbed as there are future plantings planned for this location. There area is currently overgrown with bushes."
   },
   {
-    "rfi_id": 41,
-    "topic": "Hydrant bollards",
-    "question": "Sheet 2C103 does not show bollard protection around the hydrant between the engine garage and barracks. Should bollards be provided?"
+    "rfi_id": "51",
+    "topic": "Fan coil unit locations not coordinated",
+    "question": "M-114 shows units VFC-4-4 through 4-8 have been placed in the drawings without consideration of lighting and coordination requirements. Please provide exact locations to place these units within each room. Please consider lighting, required 36\" electrical clearance on connection side of the unit, and 18\" access panel to service the unit. If the access zone/access panel can be on the SE side of the units, that would benefit the condensate routing."
   },
   {
-    "rfi_id": 49,
-    "topic": "Fire sprinklers",
-    "question": "Sheet OF001 indicates fire protection for the barracks only. Please confirm whether the barracks is the only building requiring fire sprinkler piping."
+    "rfi_id": "27.1",
+    "topic": "Brick ledger corbel shape change",
+    "question": "As captured in RFI #27 the brick ledger is to be a corbel detail as shown in the attached markup. For ease of installation the team is proposing to square off the bottom of the corbel to form a rectangular profile. Per previous correspondence with CPL, please confirm it is acceptable to shift from a trapezoidal corbel detail to a rectangular."
   },
   {
-    "rfi_id": 67,
-    "topic": "BBQ pad conduit",
-    "question": "What conduit size and number of circuits are required for the BBQ pad? Please confirm whether the homerun connects to Panel W or W1."
+    "rfi_id": "30.1",
+    "topic": "Redesigned pile cap at tunnel clash",
+    "question": "As captured in RFI #30, the pile shaft along gridline i was planned to be shifted 3' to the North, however, there are still clashes with the existing tunnel. To avoid continuously clashing with the tunnel, the team is asking for a new pile cap detail to remove the second pile. CPL to please design a new footing in lieu of the previously planned pile and pile cap."
   },
   {
-    "rfi_id": 106,
-    "topic": "Roof panel thickness",
-    "question": "Specification Section 07 41 13 lists both 24 gauge steel and .040 aluminum for formed metal roof panels. Please clarify the required material and thickness."
+    "rfi_id": "36",
+    "topic": "ADA shower floor drain dimensions missing",
+    "question": "The floor drains outside all ADA transfer and roll-in showers do not have any dimensions currently shown on the architectural drawings. Details C1 and E1 on page A-411 show examples of ADA units that do not have any dimensions to the floor drains outside the showers. Please provide dimensions for these floor drains or provide direction on how they should be placed within the ADA bathrooms."
   },
   {
-    "rfi_id": 107,
-    "topic": "Seedling cooler power and temperature",
-    "question": "Please clarify the required operating temperature range and electrical service for the seedling coolers, as the project requirements appear inconsistent."
+    "rfi_id": "48",
+    "topic": "Refrigerant controller lacks ceiling clearance",
+    "question": "Refrigerant controller VRC-5-2 is currently located in the hallway outside Animal Care room W515. In this location, there is not enough room within the ceiling space to fit that unit. This unit requires 4\" of clear space above and 8\" of space below, and with the unit's height included that gives a total required space of 21-7/8\". Locations where there is an exposed ceiling are preferred so the required space around the unit is readily available. The attached sketch shows several proposed locations for this unit. Please review and confirm which option is preferred. \u2022 Option 1: W512 Laundry Room - this area would need a soffit for the unit to fit above the ceiling\u2022 Option 2: W410 Level 4 Lounge - this space would require a soffit for the unit as the ceiling is a linear wood grille and would not accept an access panel install\u2022 Option 3: W517 Allergy Kitchen - the ceiling would need to be removed in this room, and the space is tight with installation from other trades (electrical, HVAC, etc.)\u2022 Option 4: W507 Kitchen/ Lounge - there is not a ceiling in this space so that provides ideal room, but sound from the unit could be an issue as it is a common area"
   }
 ]

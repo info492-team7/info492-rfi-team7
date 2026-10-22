@@ -2,7 +2,7 @@ async function loadAgentResults() {
   const container = document.getElementById("rfi-results");
 
   try {
-    const response = await fetch("./data/agent_results.json");
+    const response = await fetch("./data/brush_creek/agent_results.json");
 
     if (!response.ok) {
       throw new Error("Could not load agent results.");
