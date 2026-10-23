@@ -1,8 +1,10 @@
 
 # RFI Triage Agent - GC Team 7
+# Demo 2 - Haggett Hall
 
 import json
 import os
+import sys
 import time
 from google import genai
 from google.genai import types, errors
@@ -15,11 +17,14 @@ def convert_priority(priority):
     priority_map = {
         "high": 1,
         "medium": 2,
-        "low": 3
+        "low": 3,
+        "1": 1,
+        "2": 2,
+        "3": 3
     }
 
     if isinstance(priority, str):
-        priority = priority_map.get(priority.lower(), priority)
+        priority = priority_map.get(priority.lower().strip())
 
     if priority in (1, 2, 3):
         return priority
@@ -27,15 +32,43 @@ def convert_priority(priority):
     return None
 
 
-def triage_rfi(rfi):
-    prompt = f"""
-You are an RFI triage assistant for a construction project.
+def get_earlier_rfis(rfi, all_rfis):
+    earlier = []
+    current_id = str(rfi["rfi_id"])
 
-Analyze the RFI below and classify it based on
-the information provided. Do not make up facts.
+    for item in all_rfis:
+        if str(item["rfi_id"]) == current_id:
+            break
+
+        # Same-day RFIs follow the order in the log.
+        # Do not include records from later dates.
+        if item["created"] <= rfi["created"]:
+            earlier.append({
+                "rfi_id": item["rfi_id"],
+                "question": item["question"]
+            })
+
+    return earlier
+
+
+def triage_rfi(rfi, earlier_rfis):
+    history = json.dumps(earlier_rfis, ensure_ascii=False)
+
+    prompt = f"""
+You are an RFI triage assistant for the Haggett Hall
+construction project.
+
+These RFIs are construction-phase questions from the
+general contractor to the design team.
+
+Read the full RFI question and classify it based only
+on the information provided. Do not make up facts.
 
 RFI ID: {rfi['rfi_id']}
 Question: {rfi['question']}
+
+Earlier RFIs:
+{history}
 
 Return a JSON object with these fields:
 - rfi_id
@@ -45,39 +78,78 @@ Return a JSON object with these fields:
 - due
 - contractual_risk (low, medium, or high)
 - risk_reason
-- priority (integer: 1 = high, 2 = medium, 3 = low)
-- duplicate_of (null if unknown)
+- priority (integer: 1, 2, or 3)
+- duplicate_of (earlier RFI number or null)
 
 Use only these root_cause categories:
-- doc_conflict: conflicting information in documents
-- missing_info: missing details or requirements
-- scope_split: unclear responsibility or scope
-- duplicate: question already raised in another RFI
-- ambiguity: unclear wording or specifications
-- third_party: issue involving an outside organization
 
-For responder, use one of:
+- field_condition:
+  Unexpected site conditions that drawings did not anticipate,
+  such as existing utilities, soil, or footings.
+
+- design_conflict:
+  Two drawings, disciplines, or building elements conflict.
+
+- missing_info:
+  Drawings or specifications are missing necessary dimensions,
+  elevations, locations, or other information.
+
+- contractor_proposal:
+  The GC or subcontractor proposes a change or substitution
+  and asks the design team for approval.
+
+Choose the one root cause that best explains the question.
+
+For responder, use only:
 - architect
-- contracting_officer
+- structural
 - civil
-- electrical
-- fire_protection
+- geotechnical
+- mechanical_electrical
+- landscape
 - multiple
 
-For due, use one of:
-- before_proposal_due
-- next_amendment
+Assign priority based on urgency:
 
-Priority must be an integer:
-1 = high priority
-2 = medium priority
-3 = low priority
+1 = Field work is waiting for an answer.
+    Response needed within about 3 days.
 
-Consider project cost, schedule, safety, and
-contractual impact when assigning priority.
+2 = A response is needed soon, within about 7 days.
 
-If the available information is insufficient,
-use null rather than guessing.
+3 = The issue can wait about 14 days.
+
+Do not classify an RFI as priority 1 just because
+it mentions cost, risk, or a design conflict.
+
+Only assign priority 1 when the question suggests
+that field work is waiting or needs an immediate answer.
+
+Use the question text to estimate urgency.
+Do not use actual response dates to decide priority.
+
+For due, return the number of days:
+- Priority 1: 3
+- Priority 2: 7
+- Priority 3: 14
+
+For contractual_risk, choose low, medium, or high.
+Explain the reason briefly in risk_reason.
+
+For duplicate_of, compare the current question with
+the earlier RFIs provided above.
+
+If the question is a follow-up or continuation of an
+earlier RFI, return that earlier RFI number as a string.
+
+If there is no clear relationship, return null.
+
+Only use RFI numbers from the earlier RFI list.
+Do not invent an RFI number.
+
+Keep the original RFI ID in the output.
+Do not paraphrase the question when analyzing it.
+
+Return only the JSON object.
 """
 
     for attempt in range(3):
@@ -91,9 +163,61 @@ use null rather than guessing.
             )
 
             result = json.loads(response.text)
+
+            result["rfi_id"] = str(rfi["rfi_id"])
+
             result["priority"] = convert_priority(
                 result.get("priority")
             )
+
+            if result["priority"] is None:
+                raise ValueError("Invalid priority returned")
+
+            result["due"] = {
+                1: 3,
+                2: 7,
+                3: 14
+            }[result["priority"]]
+
+            # Check that the categories match the scoring rules.
+            valid_causes = (
+                "field_condition",
+                "design_conflict",
+                "missing_info",
+                "contractor_proposal"
+            )
+
+            valid_responders = (
+                "architect",
+                "structural",
+                "civil",
+                "geotechnical",
+                "mechanical_electrical",
+                "landscape",
+                "multiple"
+            )
+
+            if result.get("root_cause") not in valid_causes:
+                raise ValueError("Invalid root cause returned")
+
+            if result.get("responder") not in valid_responders:
+                raise ValueError("Invalid responder returned")
+
+            duplicate = result.get("duplicate_of")
+
+            if duplicate is not None:
+                duplicate = str(duplicate).replace(
+                    "RFI", ""
+                ).replace("#", "").strip()
+
+                earlier_ids = {
+                    str(item["rfi_id"]) for item in earlier_rfis
+                }
+
+                if duplicate not in earlier_ids:
+                    duplicate = None
+
+            result["duplicate_of"] = duplicate
 
             return result
 
@@ -101,59 +225,121 @@ use null rather than guessing.
             if e.code != 503 or attempt == 2:
                 raise
 
-            print("Gemini is busy. Retrying...", flush=True)
+            print(
+                "Gemini is busy. Retrying...",
+                flush=True
+            )
             time.sleep(5 * (attempt + 1))
 
 
-if __name__ == "__main__":
-    with open("data/rfi_test_set.json", "r") as file:
+def run_agent(input_file, output_file):
+    with open(input_file, "r", encoding="utf-8") as file:
         rfis = json.load(file)
 
-    print(f"Loaded {len(rfis)} RFIs", flush=True)
+    with open(
+        "data/haggett_all_rfis.json",
+        "r",
+        encoding="utf-8"
+    ) as file:
+        all_rfis = json.load(file)
 
-    output_file = "data/agent_results.json"
+    # The test set does not include creation dates.
+    # Match each test RFI with the full Haggett Hall log.
+    rfi_lookup = {
+        str(item["rfi_id"]): item for item in all_rfis
+    }
+
     results = []
 
     if os.path.exists(output_file):
-        with open(output_file, "r") as file:
+        with open(output_file, "r", encoding="utf-8") as file:
             results = json.load(file)
 
-    for result in results:
-        result["priority"] = convert_priority(
-            result.get("priority")
-        )
-
-    with open(output_file, "w") as file:
-        json.dump(results, file, indent=2)
+    print(f"Loaded {len(rfis)} RFIs", flush=True)
 
     for rfi in rfis:
+        rfi_id = str(rfi["rfi_id"])
+
+        if rfi_id not in rfi_lookup:
+            print(f"RFI #{rfi_id} not found in log")
+            continue
+
         if any(
-            str(r["rfi_id"]) == str(rfi["rfi_id"])
-            for r in results
+            str(result["rfi_id"]) == rfi_id
+            for result in results
         ):
             print(
-                f"Skipping RFI #{rfi['rfi_id']} (already processed)",
+                f"Skipping RFI #{rfi_id} (already processed)",
                 flush=True
             )
             continue
 
-        print(f"Analyzing RFI #{rfi['rfi_id']}...", flush=True)
+        # Use the complete original question.
+        full_rfi = rfi_lookup[rfi_id]
+
+        earlier_rfis = get_earlier_rfis(
+            full_rfi,
+            all_rfis
+        )
+
+        print(
+            f"Analyzing RFI #{rfi_id}...",
+            flush=True
+        )
 
         try:
-            result = triage_rfi(rfi)
-            results.append(result)
-            print(json.dumps(result, indent=2), flush=True)
+            result = triage_rfi(full_rfi, earlier_rfis)
 
-        except Exception as e:
+            results.append(result)
+
             print(
-                f"RFI #{rfi['rfi_id']} failed: {e}",
+                json.dumps(result, indent=2),
                 flush=True
             )
 
-        with open(output_file, "w") as file:
+        except Exception as e:
+            print(
+                f"RFI #{rfi_id} failed: {e}",
+                flush=True
+            )
+
+        with open(
+            output_file,
+            "w",
+            encoding="utf-8"
+        ) as file:
             json.dump(results, file, indent=2)
 
     print(
         f"Finished! {len(results)}/{len(rfis)} RFIs completed.",
         flush=True
     )
+
+
+if __name__ == "__main__":
+    runs = {
+        "run1": (
+            "data/rfi_test_set.json",
+            "results/run1.json"
+        ),
+        "run2": (
+            "data/rfi_test_set.json",
+            "results/run2.json"
+        ),
+        "all35": (
+            "data/haggett_all_rfis.json",
+            "results/run_all35.json"
+        )
+    }
+
+    if len(sys.argv) != 2 or sys.argv[1] not in runs:
+        print("Usage: python agent/triage_agent.py run1")
+        print("       python agent/triage_agent.py run2")
+        print("       python agent/triage_agent.py all35")
+        sys.exit(1)
+
+    input_file, output_file = runs[sys.argv[1]]
+
+    os.makedirs("results", exist_ok=True)
+
+    run_agent(input_file, output_file)
