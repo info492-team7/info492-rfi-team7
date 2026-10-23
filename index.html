@@ -28,6 +28,7 @@
         <a href="#coordination">Coordination</a>
         <a href="#demos">Experiments</a>
         <a href="#demo1">Demo 1</a>
+        <a href="#demo2">Demo 2</a>
       </div>
 
     </div>
@@ -44,18 +45,18 @@
       </p>
 
       <h1>
-        Improving Clarity in
-        <span>AI-Assisted RFI Drafting</span>
+        Improving Construction Coordination with
+        <span>AI-Assisted RFI Triage</span>
       </h1>
 
       <p class="hero-description">
-        GC Team 7 · Thesis + Coordination Posture Design
+        GC Team 7 · RFI Coordination and Evaluation
       </p>
 
       <div class="hero-tags">
-        <span>RFI Creation</span>
-        <span>AI Drafting Assistant</span>
-        <span>Clarity Defects</span>
+        <span>RFI Triage</span>
+        <span>AI Assistance</span>
+        <span>Priority Detection</span>
         <span>Construction Coordination</span>
       </div>
 
@@ -117,97 +118,29 @@
       <div class="feature-card">
 
         <p class="lead">
-          Follow-ups on Requests for Information (RFIs) are driven substantially by clarity
-          defects such as missing references/documents, quantities without units, double-
-          barreled questions, or undefined abbreviations. With the use of an AI drafting
-          assistant at the creation stage, we expect at least a 10% relative reduction,
-          based on our project lens data, in sent RFIs with at least one defect.
+          AI-assisted RFI triage can improve construction information flow by helping
+          project teams identify urgent RFIs earlier, route them to the appropriate
+          responder, and recognize repeated or related questions before delays grow.
         </p>
 
         <p>
-          One point where construction information flow breaks down is the moment an RFI is written.
-          An issue can be noticed in the field by a subcontractor, translated into an RFI by
-          a general contractor, and then sent to the respective party within the project. This
-          means that the wording at the creation stage is what every later party has to work
-          from.
+          In Demo 1, our first RFI triage agent showed potential but also revealed
+          important limitations. The agent performed well in identifying responders,
+          but it tended to overestimate urgency and had difficulty recognizing repeated
+          RFIs when earlier project context was unavailable.
         </p>
 
         <p>
-          RFIs should reference specific drawings, documents, and specifications,
-          say who needs to respond, and include a needed-by date, because the initial RFI
-          as well as the response become part of the official project record (PM Problems,
-          2020).
+          For Demo 2, we use real construction-phase RFIs from the UW Haggett Hall
+          project to test whether an improved version of the agent can classify RFI
+          priority more accurately and consistently.
         </p>
 
         <p>
-          When one of these essential details of an RFI is missing, the responder
-          has to ask for it before they can answer, which triggers a follow-up and at times
-          multiple rounds of clarification (SubmittalLink, n.d.).
+          Our current project data shows an average RFI processing time of approximately
+          7.3 days. We are testing whether better identification of urgent RFIs could
+          contribute to reducing average processing time by approximately 10%.
         </p>
-
-        <p>
-          RFIs are also costly before any follow-up happens. A study found that the estimated
-          average cost of an RFI is $1,080 to review and respond to, with a median response
-          time of 9.7 days, and about 22% of RFIs never answered
-          (Navigant Construction Forum, 2013).
-        </p>
-
-        <p>
-          Each follow-up adds another review and response cycle to that cost, and an RFI can
-          go unanswered, adding delay to the project.
-        </p>
-
-        <p>
-          We’re focusing on the creation stage because most of these defects can be caught
-          before the RFI is sent out using an AI drafting assistant by checking for units,
-          expanding abbreviations, splitting double-barreled questions, and asking for
-          drawing or specification references.
-        </p>
-
-      </div>
-
-
-      <!-- THESIS CITATIONS -->
-      <div class="citation-card">
-
-        <h3>Citations</h3>
-
-        <p>
-          Dellas, G. (2026). RFI Best Practices: A Guide for Construction
-          Professionals. Submittallink.Com.
-        </p>
-
-        <a
-          href="https://www.submittallink.com/post/rfi-best-practices"
-          target="_blank"
-          rel="noopener noreferrer">
-          View SubmittalLink source
-        </a>
-
-        <p>
-          Hughes, N., &amp; Ap, L. (2013). IMPACT &amp; CONTROL OF RFIs ON
-          CONSTRUCTION PROJECTS A Research Perspective Issued by the
-          Navigant Construction ForumTM Construction Forum.
-        </p>
-
-        <a
-          href="https://www.cmaanet.org/sites/default/files/resource/Impact%20%26%20Control%20of%20RFIs%20on%20Construction%20Projects.pdf"
-          target="_blank"
-          rel="noopener noreferrer">
-          View Navigant source
-        </a>
-
-        <p>
-          PM Problems. (2020). The RFI In Construction: What It Is, What It’s For &amp;
-          7 Key Best Practices [Free Template] [Video]. YouTube.
-        </p>
-
-        <a
-          href="https://www.youtube.com/watch?v=L17zSnTh0Mo"
-          target="_blank"
-          rel="noopener noreferrer">
-          View PM Problems source
-        </a>
 
       </div>
 
@@ -225,38 +158,38 @@
       <div class="feature-card">
 
         <p>
-          Our team will use the public RFI log from the Brush Creek Work Center
-          Construction solicitation (127EAW26R0001), issued by the U.S. Forest Service.
-          The log is dated March 27th, 2026 and it contains 271 questions from bidders
-          and their respective government responses.
+          Beginning with Demo 2, our project lens uses real construction-phase RFI data
+          from the University of Washington Haggett Hall project managed by Andersen
+          Construction.
         </p>
 
         <p>
-          These are pre-award questions from bidders to the government, not
-          construction-phase RFIs that have been passed from the subcontractors then
-          through to a GC then to a design team. However, this log still fits our study.
+          The dataset includes RFIs #25 through #55, including follow-up RFIs such as
+          26.1, 27.1, and 30.1. In total, the available dataset contains 35 RFIs created
+          between February 12 and April 9, 2025.
         </p>
 
         <p>
-          Each of the questions is a real contractor's own wording regarding drawings,
-          specifications and scope so it works as a representation of the original issue
-          that a GC would formalize.
+          Unlike the Brush Creek dataset used in Demo 1, these are actual
+          construction-phase RFIs. The log includes contractor questions, responders,
+          due dates, responses, schedule and cost impacts, and processing-time
+          information.
         </p>
 
         <p>
-          The government's response will also give us a reference answer to check whether
-          a question that is rewritten would get a similar response.
+          For formal Demo 2 evaluation, we selected 10 RFIs representing different
+          urgency levels, technical issues, and follow-up conditions.
         </p>
 
         <p>
-          Many entries have to do with proposal logic, like page limits and past performance.
-          We can easily filter this to just technical questions and select approximately
-          10 technical RFIs that best align with our four demo conditions (listed below).
+          Andersen Construction's original response windows are used as our priority
+          ground truth. RFIs with response windows of 2 to 4 days are Priority 1,
+          7 to 9 days are Priority 2, and 13 days or more are Priority 3.
         </p>
 
         <p>
-          We do not plan to use synthetic data. If a test will require it, such as ambiguity,
-          we will instead just modify a real RFI and keep its construction context.
+          The Haggett Hall dataset is real project data and is not synthetic.
+          It was shared with GC Team 7 for this UW course project.
         </p>
 
       </div>
@@ -269,19 +202,10 @@
           <strong>Dataset Source</strong>
 
           <p>
-            U.S. Department of Agriculture, Forest Service. (2026, March 27).
-            127EAW26R0001 RFI log 3.27.2026 [Solicitation attachment]. GovTribe.
+            UW Haggett Hall RFI Log · Andersen Construction · AWA-2300
           </p>
 
         </div>
-
-        <a
-          class="button"
-          href="https://govtribe.com/file/government-file/127eaw26r0001-127eaw26r0001-rfi-log-3-dot-27-dot-2026-dot-pdf"
-          target="_blank"
-          rel="noopener noreferrer">
-          View RFI Log
-        </a>
 
       </div>
 
@@ -329,8 +253,9 @@
           </h3>
 
           <p>
-            reviews the issue, uses AI assistance to rewrite or structure the request,
-            verifies that the original meaning is preserved, and submits the formal RFI.
+            reviews the issue, uses AI assistance to organize and triage the RFI,
+            verifies the result, and routes the RFI through the appropriate
+            contractual channel.
           </p>
 
         </div>
@@ -367,9 +292,9 @@
 
           <p>
             The main information artifact is the Request for Information (RFI).
-            Additional artifacts may include the original contractor question, relevant
-            project drawings, specifications, and supporting project documents
-            needed to interpret the RFI.
+            Additional artifacts may include the original contractor question,
+            previous RFIs, relevant project drawings, specifications, and supporting
+            project documents.
           </p>
 
         </div>
@@ -380,12 +305,16 @@
           <h3>AI coordination posture</h3>
 
           <p>
-            AI will be used only as a drafting and organization assistant for RFIs. It
-            may improve clarity, grammar, structure, and conciseness, but the human
-            user remains responsible for verifying the rewritten RFI before submission.
-            AI should not change the original intent, introduce unsupported
-            assumptions, resolve ambiguity on its own, or make design or scope
-            decisions.
+            AI is used as a triage and organization assistant for RFIs.
+            It may classify urgency, identify the likely responder, recognize follow-ups,
+            and organize relevant information.
+          </p>
+
+          <p>
+            Human users remain responsible for reviewing the result before action is
+            taken. The agent should never answer as if it were the architect or engineer,
+            invent drawing or specification references, or bypass the contractual
+            communication channel.
           </p>
 
         </div>
@@ -400,10 +329,10 @@
 
       <div class="section-heading">
         <p class="section-label">05 · DEMO CONCEPTS</p>
-        <h2>Four Demo Concepts</h2>
+        <h2>Experiment Progression</h2>
 
         <p>
-          Each demo targets one of the clarity defects identified in our thesis.
+          Each demo builds on what we learned from the previous version of the RFI agent.
         </p>
       </div>
 
@@ -415,12 +344,12 @@
           <span class="demo-number">01</span>
 
           <h3>
-            Missing Reference Detection
+            RFI Triage
           </h3>
 
           <p>
-            Test whether the AI drafting assistant can identify and prompt for missing
-            drawing, document, or specification references before an RFI is sent.
+            Convert RFI questions into structured triage information such as responder,
+            urgency, root cause, and contractual risk.
           </p>
 
         </div>
@@ -431,12 +360,12 @@
           <span class="demo-number">02</span>
 
           <h3>
-            Quantity and Unit Check
+            Priority Calibration
           </h3>
 
           <p>
-            Test whether the AI drafting assistant can detect quantities that are missing
-            units or otherwise unclear.
+            Test whether Agent v2 can classify RFI priority more accurately than a
+            simple keyword rule.
           </p>
 
         </div>
@@ -447,12 +376,12 @@
           <span class="demo-number">03</span>
 
           <h3>
-            Bundled Question Detection
+            Follow-Up Detection
           </h3>
 
           <p>
-            Test whether the AI drafting assistant can identify double-barreled questions
-            and split them into clearer individual asks.
+            Improve the agent's ability to recognize RFIs that continue or reference
+            earlier RFIs in the project log.
           </p>
 
         </div>
@@ -463,12 +392,12 @@
           <span class="demo-number">04</span>
 
           <h3>
-            Undefined Abbreviation Check
+            Evidence-Aware Assistance
           </h3>
 
           <p>
-            Test whether the AI drafting assistant can identify undefined abbreviations
-            and prompt the user to clarify or expand them.
+            Connect AI recommendations to project evidence while keeping a human
+            reviewer responsible for the final decision.
           </p>
 
         </div>
@@ -490,11 +419,10 @@
       <div class="feature-card">
 
         <p>
-          Our group website will display our thesis, project lens, coordination stance,
-          and the four experiments we intend to conduct. Our website will also contain
-          a user-friendly interface containing an original RFI, the AI-rewritten version
-          of the RFI, and a comparison of meaning, context, assumptions, and clarity
-          preservation.
+          Our team website documents the development of our RFI coordination agent
+          across multiple demos. It includes our project lens, coordination posture,
+          structured agent outputs, evaluation results, limitations, and future
+          improvements.
         </p>
 
       </div>
@@ -510,7 +438,7 @@
         <h2>RFI Triage Agent</h2>
 
         <p>
-          Our first working demo tests whether an AI agent can identify why RFIs
+          Our first working demo tested whether an AI agent could identify why RFIs
           are raised and structure them by responder, urgency, contractual risk,
           and priority.
         </p>
@@ -560,7 +488,7 @@
         <h2>Initial Test Results</h2>
 
         <p>
-          Agent v1 was evaluated against the team's 10-RFI answer key and then
+          Agent v1 was evaluated against the team's original 10-RFI answer key and
           used in a simulation comparing agent-assisted triage with a manual baseline.
         </p>
       </div>
@@ -568,14 +496,13 @@
 
       <div id="validation-results" class="validation-results">
 
-        <!-- HEADLINE RESULTS -->
         <div class="validation-grid">
 
           <div class="validation-card">
             <span class="validation-value">69%</span>
             <h3>Overall Accuracy</h3>
             <p>
-              Agent v1 compared with the team's 10-RFI answer key.
+              Agent v1 compared with the team's Demo 1 answer key.
             </p>
           </div>
 
@@ -606,7 +533,6 @@
         </div>
 
 
-        <!-- WHAT WORKED / LIMITATION -->
         <div class="validation-details">
 
           <div class="result-panel">
@@ -620,9 +546,8 @@
             </h3>
 
             <p>
-              Agent v1 identified all 3 priority-1 RFIs and achieved 70%
-              accuracy on root cause classification and 90% accuracy on
-              responder routing.
+              Agent v1 identified all 3 priority-1 RFIs and showed strong responder
+              routing performance.
             </p>
 
           </div>
@@ -639,58 +564,427 @@
             </h3>
 
             <p>
-              The agent labeled 6 of 10 RFIs as urgent even though the
-              answer key contained only 3 urgent RFIs. As a result,
-              simulated medium-priority RFI processing time increased by 68%.
+              Agent v1 labeled more RFIs as urgent than the answer key, showing that
+              priority calibration needed improvement.
             </p>
 
           </div>
 
         </div>
 
+      </div>
 
-        <!-- THESIS RESULT -->
-        <div class="thesis-result">
+    </section>
+
+
+    <!-- COORDINATION DEMO #2 -->
+    <section id="demo2" class="section">
+
+      <div class="section-heading">
+
+        <p class="section-label">
+          08 · COORDINATION DEMO #2
+        </p>
+
+        <h2>
+          RFI Triage Agent · Haggett Hall
+        </h2>
+
+        <p>
+          Demo 2 builds on our first RFI triage agent using real
+          construction-phase RFI data from the UW Haggett Hall project.
+          The main experiment tests whether Agent v2 can classify RFI
+          priority more accurately than a simple keyword-based rule.
+        </p>
+
+      </div>
+
+
+      <!-- WHAT CHANGED -->
+      <div class="feature-card">
+
+        <h3>
+          What Changed Since Demo 1
+        </h3>
+
+        <p>
+          Demo 1 used the Brush Creek dataset and revealed limitations including
+          over-flagged urgency, inconsistent priority calibration, and difficulty
+          recognizing follow-up RFIs.
+        </p>
+
+        <p>
+          For Demo 2, we switched to 35 real construction-phase RFIs from the
+          UW Haggett Hall project. Ten RFIs were selected for formal evaluation,
+          and Agent v2 uses the full verbatim RFI questions rather than shortened
+          paraphrases.
+        </p>
+
+        <p>
+          Earlier RFIs are also provided as context so the agent can identify
+          follow-up questions such as RFI 27.1 and RFI 30.1.
+        </p>
+
+      </div>
+
+
+      <!-- EXPERIMENT DESIGN -->
+      <div class="section-heading results-heading">
+
+        <p class="section-label">
+          EXPERIMENT DESIGN
+        </p>
+
+        <h2>
+          Priority Classification Test
+        </h2>
+
+        <p>
+          We compare Agent v2 with an independently reviewed answer key and a
+          simple non-AI keyword baseline.
+        </p>
+
+      </div>
+
+
+      <div class="validation-details">
+
+        <div class="result-panel">
 
           <p class="result-label">
-            WHAT THIS SAYS ABOUT OUR THESIS
+            WHAT WE COUNT
           </p>
 
           <h3>
-            The initial results support a 10% processing-time target,
-            but show that better priority calibration is necessary.
+            Correct Priority Labels
           </h3>
 
           <p>
-            At Agent v1's measured accuracy, simulated average RFI processing
-            time fell from 10.1 to 9.2 days. A better-calibrated agent with
-            improved routing, priority classification, and repeat detection
-            reduced simulated average processing time by 15%.
+            For each of the 10 test RFIs, we count whether the agent's Priority
+            1, 2, or 3 classification matches the ground-truth priority from
+            the project log.
           </p>
 
         </div>
 
 
-        <!-- ADDITIONAL DETAIL -->
-        <div class="result-panel validation-note">
+        <div class="result-panel">
 
           <p class="result-label">
-            VALIDATION NOTE
+            SUCCESS THRESHOLD
           </p>
 
           <h3>
-            Initial results are promising, but the test set is still small.
+            8 out of 10
           </h3>
 
           <p>
-            These results are based on 10 RFIs, and the processing times are
-            simulated rather than directly measured from the Brush Creek log.
-            The next version will improve priority calibration, use verbatim
-            RFI questions, and provide earlier RFIs to the agent for repeat
-            detection.
+            The success threshold was set before running Agent v2 and was not
+            changed after seeing the results.
           </p>
 
         </div>
+
+      </div>
+
+
+      <!-- EVALUATION -->
+      <div class="section-heading results-heading">
+
+        <p class="section-label">
+          EVALUATION
+        </p>
+
+        <h2>
+          Agent v2 Test Results
+        </h2>
+
+        <p>
+          The same 10 Haggett Hall RFIs were run through Agent v2 twice and
+          compared against the same answer key and keyword-rule baseline.
+        </p>
+
+      </div>
+
+
+      <div class="demo1-summary">
+
+        <div class="summary-card">
+          <span id="demo2-run1">4/10</span>
+          <p>Agent Run 1</p>
+        </div>
+
+        <div class="summary-card">
+          <span id="demo2-run2">4/10</span>
+          <p>Agent Run 2</p>
+        </div>
+
+        <div class="summary-card">
+          <span>6/10</span>
+          <p>Keyword Baseline</p>
+        </div>
+
+        <div class="summary-card">
+          <span>8/10</span>
+          <p>Success Target</p>
+        </div>
+
+      </div>
+
+
+      <div class="validation-details">
+
+        <div class="result-panel">
+
+          <p class="result-label">
+            CONSISTENCY
+          </p>
+
+          <h3>
+            Priority outputs were stable across both runs
+          </h3>
+
+          <p>
+            Agent v2 produced the same priority classification for all 10 RFIs
+            in both evaluation runs.
+          </p>
+
+        </div>
+
+
+        <div class="result-panel warning-panel">
+
+          <p class="result-label">
+            MAIN FINDING
+          </p>
+
+          <h3>
+            Priority calibration still needs improvement
+          </h3>
+
+          <p>
+            Both Agent v2 runs scored 4 out of 10 on priority classification,
+            below the 8 out of 10 success threshold and below the 6 out of 10
+            keyword baseline.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- AGENT OUTPUT -->
+      <div class="section-heading results-heading">
+
+        <p class="section-label">
+          AGENT V2 OUTPUT
+        </p>
+
+        <h2>
+          Haggett Hall RFI Results
+        </h2>
+
+        <p>
+          Agent v2 produces structured triage information including root cause,
+          responder, due timing, contractual risk, priority, and follow-up detection.
+        </p>
+
+      </div>
+
+
+      <div id="demo2-results" class="rfi-results">
+        <p>Loading Agent v2 results...</p>
+      </div>
+
+
+      <!-- ASK AI -->
+      <div class="section-heading results-heading">
+
+        <p class="section-label">
+          INTERACTIVE REVIEW
+        </p>
+
+        <h2>
+          Ask the RFI Agent
+        </h2>
+
+        <p>
+          Select an RFI to review the original question and the agent's structured
+          assessment. The final decision remains with the human project team.
+        </p>
+
+      </div>
+
+
+      <div class="feature-card">
+
+        <h3>Select an RFI</h3>
+
+        <select id="ask-rfi-select">
+          <option value="">Choose an RFI...</option>
+        </select>
+
+        <button id="ask-ai-button" class="button" type="button">
+          Ask AI
+        </button>
+
+        <div id="ask-ai-question" class="result-panel" style="margin-top: 24px; display: none;">
+
+          <p class="result-label">
+            ORIGINAL RFI
+          </p>
+
+          <h3 id="ask-ai-title">
+            RFI
+          </h3>
+
+          <p id="ask-ai-question-text"></p>
+
+        </div>
+
+
+        <div id="ask-ai-answer" class="result-panel" style="margin-top: 24px; display: none;">
+
+          <p class="result-label">
+            AI ASSESSMENT
+          </p>
+
+          <div class="triage-grid">
+
+            <div class="triage-item">
+              <strong>Priority</strong>
+              <span id="ask-priority">—</span>
+            </div>
+
+            <div class="triage-item">
+              <strong>Responder</strong>
+              <span id="ask-responder">—</span>
+            </div>
+
+            <div class="triage-item">
+              <strong>Root Cause</strong>
+              <span id="ask-root-cause">—</span>
+            </div>
+
+            <div class="triage-item">
+              <strong>Contractual Risk</strong>
+              <span id="ask-risk">—</span>
+            </div>
+
+            <div class="triage-item">
+              <strong>Follow-Up</strong>
+              <span id="ask-duplicate">—</span>
+            </div>
+
+            <div class="triage-item">
+              <strong>Response Timing</strong>
+              <span id="ask-due">—</span>
+            </div>
+
+          </div>
+
+
+          <div class="risk-reason">
+
+            <strong>AI Reasoning</strong>
+
+            <p id="ask-reason"></p>
+
+          </div>
+
+
+          <div class="risk-reason">
+
+            <strong>Evidence</strong>
+
+            <p id="ask-evidence">
+              Evidence is grounded in the original Haggett Hall RFI question and,
+              when applicable, the earlier RFI identified by the agent.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- FAILURE ANALYSIS -->
+      <div class="section-heading results-heading">
+
+        <p class="section-label">
+          FAILURE ANALYSIS
+        </p>
+
+        <h2>
+          What We Learned
+        </h2>
+
+      </div>
+
+
+      <div class="validation-details">
+
+        <div class="result-panel">
+
+          <p class="result-label">
+            CLASSIFICATION FAILURES
+          </p>
+
+          <h3>
+            Stable does not necessarily mean accurate
+          </h3>
+
+          <p>
+            The agent gave consistent priority outputs across both runs, but those
+            outputs still differed from the project-log ground truth for several RFIs.
+            The next iteration needs better calibration to the actual response windows
+            used by the GC.
+          </p>
+
+        </div>
+
+
+        <div class="result-panel warning-panel">
+
+          <p class="result-label">
+            GC ROLE BOUNDARIES
+          </p>
+
+          <h3>
+            Crossed-a-Line Check
+          </h3>
+
+          <p>
+            We separately review whether the agent answers as if it were the architect
+            or engineer, invents drawing or specification numbers, or routes an RFI
+            outside the contractual communication channel.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- THESIS RESULT -->
+      <div class="thesis-result">
+
+        <p class="result-label">
+          WHAT THIS SAYS ABOUT OUR THESIS
+        </p>
+
+        <h3>
+          Agent v2 improved consistency and follow-up detection, but priority
+          classification remains the key limitation.
+        </h3>
+
+        <p>
+          The Demo 2 result does not support the claim that the current Agent v2
+          prioritizes RFIs better than the simple keyword baseline. However, the
+          negative result identifies a clear next step: calibrating priority directly
+          to real project response windows while preserving the improvements in routing,
+          follow-up detection, and structured triage.
+        </p>
 
       </div>
 
@@ -719,7 +1013,7 @@
 
 
       <div class="footer-right">
-        Thesis + Coordination Posture Design
+        AI-Assisted RFI Coordination
       </div>
 
     </div>
