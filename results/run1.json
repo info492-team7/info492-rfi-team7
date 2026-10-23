@@ -1,0 +1,112 @@
+[
+  {
+    "rfi_id": "29",
+    "needs_response": true,
+    "root_cause": "field_condition",
+    "responder": "civil",
+    "due": 3,
+    "contractual_risk": "medium",
+    "risk_reason": "Physical conflict between existing utility infrastructure and structural design requires immediate field adjustment to avoid construction delays.",
+    "priority": 1,
+    "duplicate_of": null
+  },
+  {
+    "rfi_id": "30",
+    "needs_response": true,
+    "root_cause": "field_condition",
+    "responder": "structural",
+    "due": 3,
+    "contractual_risk": "high",
+    "risk_reason": "Relocating a structural pile shaft affects foundation integrity and requires structural redesign/approval before work can proceed.",
+    "priority": 1,
+    "duplicate_of": null
+  },
+  {
+    "rfi_id": "33",
+    "needs_response": true,
+    "root_cause": "design_conflict",
+    "responder": "architect",
+    "due": 7,
+    "contractual_risk": "medium",
+    "risk_reason": "Conflict between plumbing fixtures and ADA accessibility requirements across multiple units potentially necessitating design modifications.",
+    "priority": 2,
+    "duplicate_of": null
+  },
+  {
+    "rfi_id": "53",
+    "needs_response": true,
+    "root_cause": "missing_info",
+    "responder": "civil",
+    "due": 7,
+    "contractual_risk": "low",
+    "risk_reason": "Missing elevation data for site drainage components is a common design clarification request and does not imply an immediate site stop-work.",
+    "priority": 2,
+    "duplicate_of": null
+  },
+  {
+    "rfi_id": "34",
+    "needs_response": true,
+    "root_cause": "design_conflict",
+    "responder": "landscape",
+    "due": 7,
+    "contractual_risk": "medium",
+    "risk_reason": "Clashes in lighting layout and questions regarding site clearing could impact the site landscaping schedule and potential removal/installation costs.",
+    "priority": 2,
+    "duplicate_of": null
+  },
+  {
+    "rfi_id": "27.1",
+    "needs_response": true,
+    "root_cause": "contractor_proposal",
+    "responder": "structural",
+    "due": 7,
+    "contractual_risk": "medium",
+    "risk_reason": "Changing the profile of the brick ledger corbel involves potential structural geometry revisions and coordination with architectural details.",
+    "priority": 2,
+    "duplicate_of": "27"
+  },
+  {
+    "rfi_id": "30.1",
+    "needs_response": true,
+    "root_cause": "field_condition",
+    "responder": "structural",
+    "due": 3,
+    "contractual_risk": "high",
+    "risk_reason": "Structural redesign required due to ongoing clashes with existing underground utilities, impacting foundation schedule and cost.",
+    "priority": 1,
+    "duplicate_of": "30"
+  },
+  {
+    "rfi_id": "36",
+    "needs_response": true,
+    "root_cause": "missing_info",
+    "responder": "architect",
+    "due": 7,
+    "contractual_risk": "low",
+    "risk_reason": "Lack of dimensioning for floor drains in ADA units requires architectural clarification to ensure compliance with ADA accessibility requirements.",
+    "priority": 2,
+    "duplicate_of": null
+  },
+  {
+    "rfi_id": "48",
+    "needs_response": true,
+    "root_cause": "contractor_proposal",
+    "responder": "mechanical_electrical",
+    "due": 7,
+    "contractual_risk": "medium",
+    "risk_reason": "Relocating mechanical equipment requires design approval to ensure compliance with clearance, acoustic, and aesthetic requirements.",
+    "priority": 2,
+    "duplicate_of": null
+  },
+  {
+    "rfi_id": "51",
+    "needs_response": true,
+    "root_cause": "missing_info",
+    "responder": "mechanical_electrical",
+    "due": 7,
+    "contractual_risk": "medium",
+    "risk_reason": "Lack of precise equipment placement impacts MEP routing, lighting layout, and accessibility, potentially causing rework if guessed incorrectly.",
+    "priority": 2,
+    "duplicate_of": null
+  }
+]
