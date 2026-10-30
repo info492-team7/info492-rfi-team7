@@ -1,0 +1,112 @@
+[
+  {
+    "rfi_id": "29",
+    "needs_response": true,
+    "root_cause": "field_condition",
+    "responder": "civil",
+    "due": 3,
+    "contractual_risk": "high",
+    "risk_reason": "Direct physical conflict between a water line and structural footing identified during active trenching operations; potential for delay to site utilities work.",
+    "priority": 1,
+    "duplicate_of": null
+  },
+  {
+    "rfi_id": "30",
+    "needs_response": true,
+    "root_cause": "field_condition",
+    "responder": "structural",
+    "due": 3,
+    "contractual_risk": "high",
+    "risk_reason": "Relocation of a pile shaft impacts structural foundation integrity and may incur significant delay and re-engineering costs.",
+    "priority": 1,
+    "duplicate_of": null
+  },
+  {
+    "rfi_id": "33",
+    "needs_response": true,
+    "root_cause": "design_conflict",
+    "responder": "architect",
+    "due": 7,
+    "contractual_risk": "medium",
+    "risk_reason": "Conflict between plumbing fixtures and ADA accessibility requirements necessitates design change to avoid non-compliance or rework.",
+    "priority": 2,
+    "duplicate_of": null
+  },
+  {
+    "rfi_id": "53",
+    "needs_response": true,
+    "root_cause": "missing_info",
+    "responder": "civil",
+    "due": 7,
+    "contractual_risk": "low",
+    "risk_reason": "Missing elevation data on civil drawings requires clarification to ensure proper drainage installation and avoid potential rework.",
+    "priority": 2,
+    "duplicate_of": null
+  },
+  {
+    "rfi_id": "34",
+    "needs_response": true,
+    "root_cause": "design_conflict",
+    "responder": "multiple",
+    "due": 7,
+    "contractual_risk": "medium",
+    "risk_reason": "Potential for rework regarding light pole layout and site clearing scope, both of which affect project costs and site aesthetics.",
+    "priority": 2,
+    "duplicate_of": null
+  },
+  {
+    "rfi_id": "51",
+    "needs_response": true,
+    "root_cause": "missing_info",
+    "responder": "mechanical_electrical",
+    "due": 7,
+    "contractual_risk": "medium",
+    "risk_reason": "Lack of defined equipment placement impacts HVAC installation, electrical clearance compliance, and maintenance access, potentially requiring rework if not resolved.",
+    "priority": 2,
+    "duplicate_of": null
+  },
+  {
+    "rfi_id": "27.1",
+    "needs_response": true,
+    "root_cause": "contractor_proposal",
+    "responder": "structural",
+    "due": 7,
+    "contractual_risk": "medium",
+    "risk_reason": "Proposed change in geometry for the corbel detail impacts structural integrity and requires verification by the structural engineer of record.",
+    "priority": 2,
+    "duplicate_of": "27"
+  },
+  {
+    "rfi_id": "30.1",
+    "needs_response": true,
+    "root_cause": "field_condition",
+    "responder": "structural",
+    "due": 3,
+    "contractual_risk": "high",
+    "risk_reason": "Structural redesign and foundation adjustments for pile caps have high potential for schedule delay and significant cost impact.",
+    "priority": 1,
+    "duplicate_of": "30"
+  },
+  {
+    "rfi_id": "36",
+    "needs_response": true,
+    "root_cause": "missing_info",
+    "responder": "architect",
+    "due": 7,
+    "contractual_risk": "low",
+    "risk_reason": "Lack of dimensioning for ADA drain placement may lead to non-compliance with ADA accessibility standards if not corrected before installation.",
+    "priority": 2,
+    "duplicate_of": null
+  },
+  {
+    "rfi_id": "48",
+    "needs_response": true,
+    "root_cause": "contractor_proposal",
+    "responder": "mechanical_electrical",
+    "due": 7,
+    "contractual_risk": "medium",
+    "risk_reason": "Relocating mechanical equipment impacts multiple trades and room functions, potentially affecting acoustic performance and accessibility compliance.",
+    "priority": 2,
+    "duplicate_of": null
+  }
+]
